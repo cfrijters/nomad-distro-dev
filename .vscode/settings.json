@@ -1,5 +1,20 @@
 {
+    "python.defaultInterpreterPath": ".venv/bin/python3",
     "python.analysis.extraPaths": [
-        "./packages/nomad-FAIR"
-    ]
+        ".venv/lib/python3.12/site-packages/",
+        ".venv/lib/python3.12/",
+        "./packages/nomad-FAIR/"
+    ],
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.egg-info": true,
+    },
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
 }
